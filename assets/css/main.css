@@ -1,4 +1,4 @@
-h@import url(font-awesome.min.css);
+@import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
 
 /*
@@ -903,7 +903,7 @@ h@import url(font-awesome.min.css);
 		cursor: default;
 		max-width: 100%;
 		opacity: 0.95;
-		position: absolute;
+		position: relative;
 		text-align: center;
 		width: 27em;
 	}
@@ -1021,17 +1021,17 @@ h@import url(font-awesome.min.css);
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		/*
+
 		-moz-justify-content: stretch;
 		-webkit-justify-content: stretch;
 		-ms-justify-content: stretch;
 		justify-content: stretch;
-		*/
+				/*
 		-moz-justify-content: space-between;
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-
+    */
 		-moz-flex-direction: column;
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
@@ -1057,72 +1057,35 @@ h@import url(font-awesome.min.css);
 			display: block;
 		}
 
-		@media screen and (max-width: 360px) {
+		@media screen and (max-width: 480px) {
 
 			#wrapper {
 				padding: 0.75em;
 			}
+			 #wrapper iframe {
+        margin: auto;
+        padding: 2%;
+        position: relative;
+        width: 90%
+        min-height:100%;
+        flex-direction: column;
+        flex: 1 1 0;
+    }
 
-		}
+
+        }
 
 		body.is-ie #wrapper {
 			height: 100%;
 		}
+		@media screen and (min-width: 480px) {
 		    #wrapper iframe {
-        margin: auto;
-        padding: 0;
-        position: relative;
-        width: 60%;
-        min-height: 100%;
-        flex-direction: column;
-        flex-grow: 1;
-    }
-/* Wrapper2 */
-
-	#wrapper2 {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-align-items: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
-		-moz-justify-content: space-between;
-		-webkit-justify-content: space-between;
-		-ms-justify-content: space-between;
-		justify-content: space-between;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-perspective: 1000px;
-		-webkit-perspective: 1000px;
-		-ms-perspective: 1000px;
-		perspective: 1000px;
-		position: relative;
-		min-height: 100%;
-		padding: 0;
-		z-index: 2;
-	}
-
-		#wrapper2 > * {
-			z-index: 1;
-		}
-
-		#wrapper2:before {
-			content: '';
-			display: block;
-		}
-
-		@media screen and (max-width: 360px) {
-
-			#wrapper2 {
-				padding: 0.75em;
-			}
-
-		}
-
-		body.is-ie #wrapper2 {
-			height: 100%;
-		}
+                margin: auto;
+                padding: 2%;
+                position: relative;
+                width: 60%;
+                min-height:100vh;
+                flex-direction: column;
+                flex: 1 1 0;
+             }
+        }
